@@ -5,6 +5,7 @@ import { Container } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   btn: {
@@ -12,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
   },
   containerWrapper: {
     paddingTop: "50px",
+  },
+  linkTag: {
+    textDecoration: "none",
+    // color: "#fff",
   },
 }));
 function Home() {
@@ -37,7 +42,9 @@ function Home() {
               variant="outlined"
               color="secondary"
             >
-              Get Started
+              <Link to="/register" className={classes.linkTag}>
+                Get Started
+              </Link>
             </Button>
           </Grid>
           <Grid item xs={12} sm={6}>

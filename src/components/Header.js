@@ -55,7 +55,15 @@ function Header() {
               WorkFlow
             </Link>
           </Typography>
-          <Button color="inherit">{loggedIn ? "Logout" : "Login"}</Button>
+          <Button color="inherit">
+            {loggedIn ? (
+              "Logout"
+            ) : (
+              <Link className={classes.linkTag} to="/login">
+                Login
+              </Link>
+            )}
+          </Button>
           {loggedIn ? (
             <Avatar>H</Avatar>
           ) : (
@@ -64,7 +72,9 @@ function Header() {
               variant="contained"
               color="secondary"
             >
-              Register Now
+              <Link className={classes.linkTag} to="/register">
+                Register Now
+              </Link>
             </Button>
           )}
         </Toolbar>
