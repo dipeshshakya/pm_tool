@@ -7,9 +7,9 @@ import Dashboard from "./pages/Dashboard";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
-
 function App() {
   return (
+    
     <Container maxWidth="false" disableGutters="false">
       <Switch>
         <Route path="/register">
@@ -27,7 +27,12 @@ function App() {
       </Switch>
       {/* <Home /> */}
     </Container>
+
+
+
   );
 }
+
+
 
 export default App;
